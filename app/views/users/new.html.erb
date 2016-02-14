@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+      <h2>Sign Up</h2>
+      <%= form_for @user do |f| %>
+        <% if @user.errors.any? %>
+          <div class="error_messages">
+            <div class="alert alert-danger">
+              <%= @user.errors.full_messages.first %>
+            </div>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= f.label :username, class: 'control-label' %>
+          <%= f.text_field :username, class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :password, class: 'control-label' %>
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit 'Sign Up', class: 'btn btn-success btn-block' %>
+        </div>
+        <div class="form-group">
+          <%= link_to 'Already have an account? Log in.', login_path %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

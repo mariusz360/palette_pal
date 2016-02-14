@@ -1,0 +1,32 @@
+header#header {
+  position: relative;
+  margin-bottom: 100px;
+
+  .navbar-toggle {
+    border-color: black;
+    .icon-bar {
+      color: black;
+    }
+  }
+
+  a {
+    display:inline-block;
+    color: #333;
+    &:hover {
+      color: #333;
+      text-decoration: none;
+      background-color: white;
+    }
+  }
+
+  .brand {
+    padding: 12px 15px;
+    font-family: "Pacifico";
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .auth-link {
+    padding: 20px 15px;
+  }
+}
